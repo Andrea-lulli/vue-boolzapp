@@ -180,6 +180,8 @@ var app = new Vue(
 
 
     methods: {
+
+      //ANCHOR - funzione per far comparire le chat dell'utente
       visualizzaChat(index){
 
       if (this.contacts[index].visible == true) {
@@ -188,8 +190,7 @@ var app = new Vue(
       } else {
         this.contacts[index].visible = true;
         console.log("true");
-      }
-},
+     }},
 
 
 

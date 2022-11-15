@@ -62,7 +62,8 @@
 
                 <!-- box delle chat attive -->
                 <div class="box-lista-utenti">
-                    <div class="box-chat-attiva d-flex align-items-center" v-for="(elem,index) in contacts" @click="visualizzaChat(index)">
+                    <div class="box-chat-attiva d-flex align-items-center" v-for="(elem,index) in contacts"
+                        @click="visualizzaChat(index)">
                         <div class="img-avatar col-2">
                             <img :src="contacts[index].avatar" alt="">
                         </div>
@@ -83,13 +84,14 @@
 
                 <!-- utente con la quale stai scrivendo -->
                 <div class="utente d-flex">
-                    <div class="avatar-utente ">
-                        <img src="./img/avatar_1.jpg" alt="il mio stato">
+                    <div class="avatar-utente d-flex align-items-center col-3 " v-for="(elem,index) in contacts"  v-if="elem.visible == false">
+                        <img :src="contacts[index].avatar" alt="il mio stato">
+                        <span>{{contacts[index].name}}</span>
                     </div>
 
                     <!-- nome utente con la quale stai scrivendo -->
-                    <div class="col-5 d-flex align-items-center card-name">
-                        <div>Sofia</div>
+                    <div class="col-3 d-flex align-items-center card-name">
+                        
                     </div>
 
                     <div class="col-6 d-flex align-items-center card-pulsanti justify-content-end">
@@ -101,24 +103,17 @@
 
                 <!-- box messaggi -->
                 <div class="box-chat">
-                    <div class="messaggi-chat" v-for="(elem,index) in contacts" v-if="elem.visible == false">
-                        
+                    <div class="messaggi-chat mt-5" v-for="(elem,index) in contacts" v-if="elem.visible == false">
+
                         <div v-for="(elem,index) in elem.messages">
-                            <div >
-                                <p class="chat" :class="(elem.status == 'sent') ? 'bg-success margin-chat' : 'bg-light ' " >
+                            <div>
+                                <p class="chat"
+                                    :class="(elem.status == 'sent') ? 'bg-success margin-chat' : 'bg-light ' ">
                                     {{elem.message}}
-                                    
                                 </p>
                             </div>
-                            
-                            
                         </div>
-                        
-
-                       
                     </div>
-
-                    
                 </div>
 
                 <!-- input per scrivere in chat -->
