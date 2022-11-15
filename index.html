@@ -33,7 +33,7 @@
 
                     <!-- nome utente  -->
                     <div class="col-3 d-flex align-items-center card-name">
-                        <div>Sofia</div>
+                        <div><strong>Sofia</strong></div>
                     </div>
                     <div class="col-6 d-flex align-items-center card-pulsanti justify-content-end">
                         <i class="fa-solid fa-spinner m-2 text-secondary"></i>
@@ -44,12 +44,12 @@
 
                 <!-- box notifiche -->
                 <div class="box-notifiche d-flex align-items-center">
-                    <div class="i-notifiche">
+                    <div class="i-notifiche" col-3>
                         <i class="fa-solid fa-bell-slash"></i>
                     </div>
-                    <div class="testo-notifiche">
-                        <spam class="testo">Ricevi notifiche di nuovi messaggi</spam>
-                        <p class="testo">Attiva notifiche deskop</p>
+                    <div class="testo-notifiche col-9">
+                        <div class="testo">Ricevi notifiche di nuovi messaggi</div>
+                        <a class="testo">Attiva notifiche deskop</a>
                     </div>
                 </div>
 
@@ -62,19 +62,19 @@
 
                 <!-- box delle chat attive -->
                 <div class="box-lista-utenti">
-                    <div class="box-chat-attiva d-flex align-items-center" v-for="(elem,index) in contacts"
+                    <div :class="(elem.visible == false) ? 'bg-click' : '' "
+                        class="box-chat-attiva d-flex align-items-center" v-for="(elem,index) in contacts"
                         @click="visualizzaChat(index)">
                         <div class="img-avatar col-2">
                             <img :src="contacts[index].avatar" alt="">
                         </div>
                         <div class="dati-chat col-6">
-                            <div>{{ elem.name }}</div>
-                            <div></div>
+                            <div><strong>{{ elem.name }}</strong> </div>
+                            <div class="orario-chat">Ultimo messaggio inviato</div>
                         </div>
                         <div class="orario-chat col-4">
                             {{elem.messages[0].date}}
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -84,19 +84,20 @@
 
                 <!-- utente con la quale stai scrivendo -->
                 <div class="utente d-flex">
-                    <div class="avatar-utente d-flex align-items-center col-3 " v-for="(elem,index) in contacts"  v-if="elem.visible == false">
+                    <div class="avatar-utente d-flex align-items-center col-3 " v-for="(elem,index) in contacts"
+                        v-if="elem.visible == false">
                         <img :src="contacts[index].avatar" alt="il mio stato">
-                        <span>{{contacts[index].name}}</span>
+                        <span><strong>{{contacts[index].name}}</strong></span>
                     </div>
 
                     <!-- nome utente con la quale stai scrivendo -->
                     <div class="col-3 d-flex align-items-center card-name">
-                        
+
                     </div>
 
                     <div class="col-6 d-flex align-items-center card-pulsanti justify-content-end">
-                        <i class="fa-solid fa-spinner m-2 text-secondary"></i>
-                        <i class="fa-solid fa-message m-2 text-secondary"></i>
+                        <i class="fa-solid fa-magnifying-glass m-2 text-secondary"></i>
+                        <i class="fa-solid fa-link m-2 text-secondary"></i>
                         <i class="fa-solid fa-ellipsis-vertical m-2 text-secondary"></i>
                     </div>
                 </div>

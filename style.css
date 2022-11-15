@@ -53,13 +53,13 @@
 
 .testo {
 
-    font-size: 9px;
+    font-size: 11px;
     line-height: 100%;
     margin-left: 1rem;
 }
 
 .box-notifiche {
-    height: 5%;
+    height: 6%;
     background-color: rgb(140, 228, 228, 1);
 
 }
@@ -101,7 +101,7 @@
     margin: 0.5rem 0;
 }
 
-.dati-chat, .orario-chat{
+.dati-chat{
     font-size: 12px;
 }
 
@@ -124,4 +124,6 @@
     margin-left: auto;
 }
 
-.box
+.bg-click{
+    background-color: rgb(206, 203, 203, 1);
+}
