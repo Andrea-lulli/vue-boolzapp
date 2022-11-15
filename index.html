@@ -43,16 +43,33 @@
                         <p class="testo">Attiva notifiche deskop</p>
                     </div>
                 </div>
-                <div class="input-group mb-3">
+                <div class="input-group ">
                     <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
-                    <input type="search" class="form-control" placeholder="Cerca ho inizia una nuova chat" aria-label="Username" aria-describedby="basic-addon1">
-                  </div>
+                    <input type="search" class="form-control" placeholder="Cerca ho inizia una nuova chat"
+                        aria-label="Username" aria-describedby="basic-addon1">
+                </div>
                 <div class="box-lista-utenti"></div>
             </div>
             <div class="conteiner-chat">
-                <div class="utente"></div>
+                <div class="utente d-flex">
+                    <div class="avatar-utente col-3 ">
+                        <img src="./img/avatar_1.jpg" alt="il mio stato">
+                    </div>
+                    <div class="col-3 d-flex align-items-center card-name">
+                        <div>Sofia</div>
+                    </div>
+                    <div class="col-6 d-flex align-items-center card-pulsanti justify-content-end">
+                        <i class="fa-solid fa-spinner m-2 text-secondary"></i>
+                        <i class="fa-solid fa-message m-2 text-secondary"></i>
+                        <i class="fa-solid fa-ellipsis-vertical m-2 text-secondary"></i>
+                    </div>
+                </div>
                 <div class="box-chat"></div>
-                <div class="message"></div>
+                <div class="message input-group">
+                    <span class="input-group-text"><i class="fa-regular fa-face-smile"></i></i></i></span>
+                    <input type="text" class="form-control" placeholder="Scrivi un messaggio"  aria-label="Amount (to the nearest dollar)">
+                    <span class="input-group-text"><i class="fa-solid fa-microphone"></i></span>
+                  </div>
             </div>
         </div>
 
