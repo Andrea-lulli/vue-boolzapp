@@ -1,0 +1,61 @@
+#root {
+    background: rgb(39, 135, 128);
+    background: linear-gradient(180deg, rgba(39, 135, 128, 1) 13%, rgba(204, 201, 201, 1) 13%);
+    width: 100vw;
+    height: 100vh;
+    padding-top: 20px;
+
+}
+
+.conteiner{
+    width: 80%;
+    height: calc(100% - 20px);
+    background-color: blue;
+    margin: 0 auto;
+    
+    display: flex;
+}
+
+.conteiner-card{
+    width: 30%;
+    height: 100%;
+    background-color: aqua;
+}
+
+.conteiner-chat{
+    width: 50%;
+    height: 100%;
+    background-color: blueviolet;
+}
+
+.stato{
+    width: 100%;
+    height: 4%;
+}
+
+.my-avatar > img{
+    height: 100%;
+    border-radius: 50%;
+}
+
+.card-name, .card-pulsanti{
+    height: 100%;
+    
+}
+.testo{
+    
+    font-size: 10px;
+    line-height: 100%;
+    margin-left: 1rem;
+}
+
+.box-notifiche{
+    height: 5%;
+    
+}
+.fa-bell-slash{
+    border-radius: 50%;
+    background-color: white;
+    padding: 0.5rem;
+    margin-left: 10px;
+}
