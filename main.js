@@ -180,6 +180,17 @@ var app = new Vue(
 
 
     methods: {
+      visualizzaChat(index){
+
+      if (this.contacts[index].visible == true) {
+        console.log("false");
+        this.contacts[index].visible = false;
+      } else {
+        this.contacts[index].visible = true;
+        console.log("true");
+      }
+},
+
 
 
     },

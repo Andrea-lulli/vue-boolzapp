@@ -62,7 +62,7 @@
 
                 <!-- box delle chat attive -->
                 <div class="box-lista-utenti">
-                    <div class="box-chat-attiva d-flex align-items-center" v-for="(elem,index) in contacts">
+                    <div class="box-chat-attiva d-flex align-items-center" v-for="(elem,index) in contacts" @click="visualizzaChat(index)">
                         <div class="img-avatar col-2">
                             <img :src="contacts[index].avatar" alt="">
                         </div>
@@ -101,11 +101,13 @@
 
                 <!-- box messaggi -->
                 <div class="box-chat">
-                    <div class="messaggi-chat" v-for="(elem,index) in contacts">
+                    <div class="messaggi-chat" v-for="(elem,index) in contacts" v-if="elem.visible == false">
+                        
                         <div v-for="(elem,index) in elem.messages">
                             <div >
-                                <p class="chat" :class="(elem.status == 'sent') ? 'bg-success margin-chat' : 'bg-light ' ">
+                                <p class="chat" :class="(elem.status == 'sent') ? 'bg-success margin-chat' : 'bg-light ' " >
                                     {{elem.message}}
+                                    
                                 </p>
                             </div>
                             
