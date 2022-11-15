@@ -67,7 +67,7 @@
                             <img :src="contacts[index].avatar" alt="">
                         </div>
                         <div class="dati-chat col-6">
-                            <div>{{elem.name}}</div>
+                            <div>{{ elem.name }}</div>
                             <div></div>
                         </div>
                         <div class="orario-chat col-4">
@@ -100,7 +100,24 @@
                 </div>
 
                 <!-- box messaggi -->
-                <div class="box-chat"></div>
+                <div class="box-chat">
+                    <div class="messaggi-chat" v-for="(elem,index) in contacts">
+                        <div v-for="(elem,index) in elem.messages">
+                            <div >
+                                <p class="chat" :class="(elem.status == 'sent') ? 'bg-success margin-chat' : 'bg-light ' ">
+                                    {{elem.message}}
+                                </p>
+                            </div>
+                            
+                            
+                        </div>
+                        
+
+                       
+                    </div>
+
+                    
+                </div>
 
                 <!-- input per scrivere in chat -->
                 <div class="message input-group">

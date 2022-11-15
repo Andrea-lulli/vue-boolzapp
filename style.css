@@ -87,6 +87,7 @@
     height: 89%;
     width: 100%;
     background-image: url(./img/mine.jpg);
+    overflow:auto
 }
 
 .message {
@@ -111,3 +112,16 @@
 .box-chat-attiva{
     border-bottom: 1px solid lightgrey;
 }
+
+.chat{
+    width: 40%;
+    border-radius: 10px;
+    text-align: center;
+    margin: 1rem 2rem;
+}
+
+.margin-chat{
+    margin-left: auto;
+}
+
+.box
