@@ -27,7 +27,7 @@
                 <!-- il mio stato -->
                 <div class="stato d-flex ">
                     <!-- img del mio stato -->
-                    <div class="my-avatar col-3 ">
+                    <div class="my-avatar col-2 ">
                         <img src="./img//avatar_io.jpg" alt="il mio stato">
                     </div>
 
@@ -35,7 +35,7 @@
                     <div class="col-3 d-flex align-items-center card-name">
                         <div><strong>Sofia</strong></div>
                     </div>
-                    <div class="col-6 d-flex align-items-center card-pulsanti justify-content-end">
+                    <div class="col-7 d-flex align-items-center card-pulsanti justify-content-end">
                         <i class="fa-solid fa-spinner m-2 text-secondary"></i>
                         <i class="fa-solid fa-message m-2 text-secondary"></i>
                         <i class="fa-solid fa-ellipsis-vertical m-2 text-secondary"></i>
@@ -83,18 +83,12 @@
             <div class="conteiner-chat">
 
                 <!-- utente con la quale stai scrivendo -->
-                <div class="utente d-flex">
-                    <div class="avatar-utente d-flex align-items-center col-3 " v-for="(elem,index) in contacts"
+                <div class="utente d-flex ">
+                    <div class="avatar-utente d-flex col-6 align-items-center " v-for="(elem,index) in contacts"
                         v-if="elem.visible == false">
                         <img :src="contacts[index].avatar" alt="il mio stato">
                         <span><strong>{{contacts[index].name}}</strong></span>
                     </div>
-
-                    <!-- nome utente con la quale stai scrivendo -->
-                    <div class="col-3 d-flex align-items-center card-name">
-
-                    </div>
-
                     <div class="col-6 d-flex align-items-center card-pulsanti justify-content-end">
                         <i class="fa-solid fa-magnifying-glass m-2 text-secondary"></i>
                         <i class="fa-solid fa-link m-2 text-secondary"></i>
