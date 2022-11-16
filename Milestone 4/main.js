@@ -218,15 +218,9 @@ var app = new Vue(
         }, 1000);
       },
 
-      prova(){
-        
-        if (this.contacts[this.indiceDinamico].name.split('') == this.cerca.split('')) {
-          console.log('ok');
-        }
-      }
-
+      
     },
 
-
-
   })
+
+  
