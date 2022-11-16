@@ -174,12 +174,12 @@ var app = new Vue(
               status: 'received'
             }
           ],
-          newMessage: '',
+          
 
         }
 
       ],
-      newMessage: [''],
+      newMessage: '',
 
     },
 
