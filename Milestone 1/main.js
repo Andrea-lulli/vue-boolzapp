@@ -14,6 +14,7 @@ var app = new Vue(
 
 
       contacts: [
+
         {
           name: 'Michele',
           avatar: './img/avatar_1.jpg',
@@ -174,8 +175,12 @@ var app = new Vue(
               status: 'received'
             }
           ],
+
+          
         }
-      ]
+
+      ],
+      newMessage: ['']
     },
 
 
@@ -191,6 +196,12 @@ var app = new Vue(
         this.contacts[index].visible = true;
         console.log("true");
      }},
+
+     saveElement(){
+      
+
+      this.newmessage.push();
+     }
 
 
 

@@ -114,27 +114,12 @@
                 <!-- input per scrivere in chat -->
                 <div class="message input-group">
                     <span class="input-group-text"><i class="fa-regular fa-face-smile"></i></i></i></span>
-                    <input type="text" class="form-control" placeholder="Scrivi un messaggio"
-                        aria-label="Amount (to the nearest dollar)">
+                    <input id="prova" type="text" class="form-control" placeholder="Scrivi un messaggio" 
+                        aria-label="Amount (to the nearest dollar)" @keyup.enter="saveElement" v-model="newMessage">
                     <span class="input-group-text"><i class="fa-solid fa-microphone"></i></span>
                 </div>
             </div>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </div>
 
 
