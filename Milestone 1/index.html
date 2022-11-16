@@ -84,12 +84,15 @@
 
                 <!-- utente con la quale stai scrivendo -->
                 <div class="utente d-flex ">
-                    <div class="avatar-utente d-flex col-6 align-items-center " v-for="(elem,index) in contacts"
+                    <div class="d-flex col-2 align-items-center " >
+                        <div class="d-flex align-items-center avatar-utente" v-for="(elem,index) in contacts"
                         v-if="elem.visible == false">
-                        <img :src="contacts[index].avatar" alt="il mio stato">
-                        <span><strong>{{contacts[index].name}}</strong></span>
+                            <img :src="contacts[index].avatar" alt="il mio stato">
+                            <span><strong>{{contacts[index].name}}</strong></span>
+                        </div>
+                       
                     </div>
-                    <div class="col-6 d-flex align-items-center card-pulsanti justify-content-end">
+                    <div class="col-10 d-flex align-items-center card-pulsanti justify-content-end">
                         <i class="fa-solid fa-magnifying-glass m-2 text-secondary"></i>
                         <i class="fa-solid fa-link m-2 text-secondary"></i>
                         <i class="fa-solid fa-ellipsis-vertical m-2 text-secondary"></i>
