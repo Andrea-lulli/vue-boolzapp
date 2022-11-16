@@ -62,7 +62,7 @@
 
                 <!-- box delle chat attive -->
                 <div class="box-lista-utenti">
-                    <div :class="(elem.visible == false) ? 'bg-click' : '' "
+                    <div :class="(contacts[indiceDinamico] == contacts[index]) ? 'bg-click' : '' "
                         class="box-chat-attiva d-flex align-items-center" v-for="(elem,index) in contacts"
                         @click="visualizzaChat(index)">
                         <div class="img-avatar col-2">
@@ -85,10 +85,9 @@
                 <!-- utente con la quale stai scrivendo -->
                 <div class="utente d-flex ">
                     <div class="d-flex col-2 align-items-center " >
-                        <div class="d-flex align-items-center avatar-utente" v-for="(elem,index) in contacts"
-                        v-if="elem.visible == false">
-                            <img :src="contacts[index].avatar" alt="il mio stato">
-                            <span><strong>{{contacts[index].name}}</strong></span>
+                        <div class="d-flex align-items-center avatar-utente"  >
+                            <img :src="contacts[indiceDinamico].avatar" alt="il mio stato">
+                            <span><strong>{{contacts[indiceDinamico].name}}</strong></span>
                         </div>
                        
                     </div>
@@ -101,16 +100,13 @@
 
                 <!-- box messaggi -->
                 <div class="box-chat">
-                    <div class="messaggi-chat mt-5" v-for="(elem,index) in contacts" v-if="elem.visible == false">
-
-                        <div v-for="(elem,index) in elem.messages">
+                    <div class="messaggi-chat mt-5" v-for="(elem,index) in contacts[indiceDinamico].messages" >
                             <div>
                                 <p class="chat"
                                     :class="(elem.status == 'sent') ? 'bg-success margin-chat' : 'bg-light ' ">
                                     {{elem.message}}
                                 </p>
-                            </div>
-                        </div>
+                            </div>                       
                     </div>
                 </div>
 

@@ -12,7 +12,7 @@ var app = new Vue(
 
     data: {
 
-
+indiceDinamico: 0,
       contacts: [
 
         {
@@ -189,13 +189,8 @@ var app = new Vue(
       //ANCHOR - funzione per far comparire le chat dell'utente
       visualizzaChat(index){
 
-      if (this.contacts[index].visible == true) {
-        console.log("false");
-        this.contacts[index].visible = false;
-      } else {
-        this.contacts[index].visible = true;
-        console.log("true");
-     }},
+        this.indiceDinamico = index
+    },
 
      saveElement(){
       
