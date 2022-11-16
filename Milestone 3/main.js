@@ -12,7 +12,7 @@ var app = new Vue(
 
     data: {
 
-indiceDinamico: 0,
+      indiceDinamico: 0,
       contacts: [
 
         {
@@ -175,36 +175,51 @@ indiceDinamico: 0,
               status: 'received'
             }
           ],
+          newMessage: '',
 
-          
         }
 
       ],
-      newMessage: ['']
+      newMessage: [''],
+
     },
 
 
     methods: {
 
       //ANCHOR - funzione per far comparire le chat dell'utente
-      visualizzaChat(index){
+      visualizzaChat(index) {
 
-        this.indiceDinamico = index
+        this.indiceDinamico = index;
+
+      },
+
+      //funzione per scrivere nuovi msg ed metterli nell array
+      saveElement() {
+
+        this.contacts[this.indiceDinamico].messages.push({
+          date: '',
+          message: this.newMessage,
+          status: 'sent',
+        }
+        )
+
+        this.newMessage = '';
+
+        setTimeout(() => {
+
+          this.contacts[this.indiceDinamico].messages.push({
+            date: '',
+            message: 'ok',
+            status: 'received',
+          })
+        }, 1000);
+      },
+
+
+
     },
 
-     saveElement(){
-      
 
-      this.newmessage.push();
-     }
-
-
-
-    },
-
-    mounted() {
-
-
-    }
 
   })
