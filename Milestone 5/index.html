@@ -57,7 +57,7 @@
                 <div class="input-group ">
                     <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
                     <input type="search" class="form-control" placeholder="Cerca ho inizia una nuova chat"
-                        aria-label="Username" aria-describedby="basic-addon1" v-model="cerca"  :keyup = "ricercaNomi()">
+                        aria-label="Username" aria-describedby="basic-addon1" v-model="cerca" :keyup="ricercaNomi()">
                 </div>
 
                 <!-- box delle chat attive -->
@@ -68,12 +68,12 @@
                         <div class="img-avatar col-2">
                             <img :src="contacts[index].avatar" alt="">
                         </div>
-                        <div class="dati-chat col-6">
+                        <div class="dati-chat col-8">
                             <div><strong>{{ elem.name }}</strong> </div>
-                            <div class="orario-chat">Ultimo messaggio inviato</div>
+                            <div class="orario-chat">{{getLastMessage(index)}}</div>
                         </div>
-                        <div class="orario-chat col-4">
-                            <!-- {{ getLastHourMessages(elem) }}  -->
+                        <div class="orario-chat col-2">
+                            {{ getLastHours(index) }}
                         </div>
                     </div>
                 </div>
@@ -103,7 +103,7 @@
                     <div class="messaggi-chat mt-5" v-for="(elem,index) in contacts[indiceDinamico].messages">
                         <div>
                             <p class="chat" :class="(elem.status == 'sent') ? 'bg-success margin-chat' : 'bg-light ' ">
-                                {{elem.message}}
+                                {{elem.message}} <span class="testo-orari">{{ getLastHours(index) }} </span>
                             </p>
                         </div>
                     </div>

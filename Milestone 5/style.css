@@ -126,3 +126,8 @@
 .bg-click{
     background-color: rgb(206, 203, 203, 1);
 }
+
+.testo-orari{
+    font-size: 10px;
+    margin-left: 30px;
+}
