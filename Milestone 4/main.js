@@ -198,29 +198,30 @@ var app = new Vue(
       //funzione per scrivere nuovi msg ed metterli nell array
       saveElement() {
 
+        //crea la data di oggi
+        let newDate = `${dayjs().date()}/${dayjs().month()}/${dayjs().year()} ${dayjs().hour()}:${dayjs().minute()}:${dayjs().second()}`;
+        console.log(newDate);
+
+        //nuovo messaggio inviato
         this.contacts[this.indiceDinamico].messages.push({
-          date: '',
+          date: newDate,
           message: this.newMessage,
           status: 'sent',
-        },
-       
-        )
+        },)
 
+        //resetta il campo di imput
         this.newMessage = '';
 
+        //messaggio di risposta automatico
         setTimeout(() => {
 
           this.contacts[this.indiceDinamico].messages.push({
-            date: '',
+            date: newDate,
             message: 'ok',
             status: 'received',
           })
         }, 1000);
       },
-
-      
     },
-
   })
 
-  
