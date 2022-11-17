@@ -184,9 +184,22 @@ var app = new Vue(
       cerca: ""
 
     },
-
+    
 
     methods: {
+
+      
+      // //funzione per ora nei contatti
+      // orarioContatti(elem){
+        
+      //   let ora = elem.date;
+      //   ora = ora.split(' ')
+        
+      //   console.log(ora[1])
+
+      //   return ora[1];
+      // },
+
 
       //ANCHOR - funzione per far comparire le chat dell'utente
       visualizzaChat(index) {
@@ -195,6 +208,7 @@ var app = new Vue(
 
       },
 
+      
       //funzione per scrivere nuovi msg ed metterli nell array
       saveElement() {
 
