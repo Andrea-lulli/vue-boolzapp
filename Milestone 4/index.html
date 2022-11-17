@@ -57,14 +57,14 @@
                 <div class="input-group ">
                     <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
                     <input type="search" class="form-control" placeholder="Cerca ho inizia una nuova chat"
-                        aria-label="Username" aria-describedby="basic-addon1" v-model="cerca"  @keyup.enter = "ricercaNomi">
+                        aria-label="Username" aria-describedby="basic-addon1" v-model="cerca"  :keyup = "ricercaNomi()">
                 </div>
 
                 <!-- box delle chat attive -->
                 <div class="box-lista-utenti">
                     <div :class="(contacts[indiceDinamico] == contacts[index]) ? 'bg-click' : '' "
                         class="box-chat-attiva d-flex align-items-center" v-for="(elem,index) in contacts"
-                        @click="visualizzaChat(index)">
+                        @click="visualizzaChat(index)" v-if="elem.visible == true">
                         <div class="img-avatar col-2">
                             <img :src="contacts[index].avatar" alt="">
                         </div>

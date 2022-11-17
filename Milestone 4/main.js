@@ -184,21 +184,21 @@ var app = new Vue(
       cerca: ""
 
     },
-    
+
 
     methods: {
 
-      
-        // //funzione per ora nei contatti
-        // getLastHourMessages(elem){
-        
-         
-        
-        //   let date = elem.date;
-        //   date = date.split(' ')
 
-        //   return date[1]
-        // },
+      // //funzione per ora nei contatti
+      // getLastHourMessages(elem){
+
+
+
+      //   let date = elem.date;
+      //   date = date.split(' ')
+
+      //   return date[1]
+      // },
 
 
       //ANCHOR - funzione per far comparire le chat dell'utente
@@ -208,7 +208,7 @@ var app = new Vue(
 
       },
 
-      
+
       //funzione per scrivere nuovi msg ed metterli nell array
       saveElement() {
 
@@ -238,7 +238,19 @@ var app = new Vue(
       },
 
       //ricerca dei nomi
-      ricercaNomi(){
+      ricercaNomi() {
+        this.contacts.forEach((element, index) => {
+          //convertire il nomi in lettere minuscole
+          let Name = element.name.toLowerCase();
+          console.log(Name)
+
+          //se name è uguale a cerca allora = true 
+          if (Name.includes(this.cerca.toLowerCase())) {
+            return element.visible = true
+          } else {
+            return element.visible = false
+          }         
+        });
 
       },
     },
