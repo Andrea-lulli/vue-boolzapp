@@ -189,16 +189,16 @@ var app = new Vue(
     methods: {
 
       
-      // //funzione per ora nei contatti
-      // orarioContatti(elem){
+        // //funzione per ora nei contatti
+        // getLastHourMessages(elem){
         
-      //   let ora = elem.date;
-      //   ora = ora.split(' ')
+         
         
-      //   console.log(ora[1])
+        //   let date = elem.date;
+        //   date = date.split(' ')
 
-      //   return ora[1];
-      // },
+        //   return date[1]
+        // },
 
 
       //ANCHOR - funzione per far comparire le chat dell'utente
