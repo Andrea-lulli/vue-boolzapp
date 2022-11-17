@@ -250,6 +250,14 @@ var app = new Vue(
         return this.contacts[index].messages[Date].date.slice(10, 19)
       },
 
+      //funzione per l'ora dei messaggi nella chat
+      getLastHoursChat(elem) {
+
+        return elem.date.slice(10, 19)
+      },
+
+
+
       //funzione per l'ultimo messaggio inviato
       getLastMessage(index) {
 

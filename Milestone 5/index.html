@@ -103,8 +103,9 @@
                     <div class="messaggi-chat mt-5" v-for="(elem,index) in contacts[indiceDinamico].messages">
                         <div>
                             <p class="chat" :class="(elem.status == 'sent') ? 'bg-success margin-chat' : 'bg-light ' ">
-                                {{elem.message}} <span class="testo-orari">{{ getLastHours(index) }} </span>
+                                {{elem.message}} <span class="testo-orari"> {{getLastHoursChat(elem)}}</span>
                             </p>
+
                         </div>
                     </div>
                 </div>
