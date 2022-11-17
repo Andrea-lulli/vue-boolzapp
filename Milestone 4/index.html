@@ -57,7 +57,7 @@
                 <div class="input-group ">
                     <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
                     <input type="search" class="form-control" placeholder="Cerca ho inizia una nuova chat"
-                        aria-label="Username" aria-describedby="basic-addon1" v-model="cerca">
+                        aria-label="Username" aria-describedby="basic-addon1" v-model="cerca"  @keyup.enter = "ricercaNomi">
                 </div>
 
                 <!-- box delle chat attive -->

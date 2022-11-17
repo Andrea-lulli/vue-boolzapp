@@ -236,6 +236,11 @@ var app = new Vue(
           })
         }, 1000);
       },
+
+      //ricerca dei nomi
+      ricercaNomi(){
+
+      },
     },
   })
 
