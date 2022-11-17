@@ -188,27 +188,6 @@ var app = new Vue(
 
     methods: {
 
-
-      //funzione per l'ora nei contatti
-      getLastHours(index) {
-
-        let Date = this.contacts[index].messages.length - 1;
-
-        return this.contacts[index].messages[Date].date.slice(10, 19)
-      },
-
-      //funzione per l'ultimo messaggio inviato
-      getLastMessage(index) {
-
-        let Message = this.contacts[index].messages.length - 1;
-
-        return this.contacts[index].messages[Message].message
-
-      },
-
-
-
-
       //ANCHOR - funzione per far comparire le chat dell'utente
       visualizzaChat(index) {
 
@@ -260,6 +239,23 @@ var app = new Vue(
             return element.visible = false
           }
         });
+
+      },
+
+      //funzione per l'ora nei contatti
+      getLastHours(index) {
+
+        let Date = this.contacts[index].messages.length - 1;
+
+        return this.contacts[index].messages[Date].date.slice(10, 19)
+      },
+
+      //funzione per l'ultimo messaggio inviato
+      getLastMessage(index) {
+
+        let Message = this.contacts[index].messages.length - 1;
+
+        return this.contacts[index].messages[Message].message
 
       },
     },
