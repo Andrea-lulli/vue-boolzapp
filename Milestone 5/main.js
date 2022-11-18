@@ -266,6 +266,11 @@ var app = new Vue(
         return this.contacts[index].messages[Message].message
 
       },
+
+      //cancella messaggio dalla chat
+      deleteMessage( index ) {
+        this.contacts[this.indiceDinamico].messages.splice(index, 1)
+      }
     },
   })
 
