@@ -38,9 +38,9 @@
 }
 
 .my-avatar>img {
-    height: 80%;
+    width: 35px;
     border-radius: 50%;
-    margin-top: 0.3rem;
+    margin-top: 0.1rem;
     
 }
 
@@ -58,7 +58,7 @@
 }
 
 .box-notifiche {
-    height: 6%;
+    height: 7%;
     background-color: rgb(140, 228, 228, 1);
 
 }
@@ -71,13 +71,13 @@
 }
 
 .box-lista-utenti {
-    height: 82%;
+    height: 81%;
     width: 100%;
     overflow:auto;
 }
 
 .avatar-utente > img {
-    width: 35%;
+    width: 35px;
     border-radius: 50%;
     margin-top: 0.1rem;
     margin-right: 0.5rem;
