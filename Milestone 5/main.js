@@ -196,24 +196,24 @@ var app = new Vue(
       },
 
 
-      //funzione per scrivere nuovi msg ed metterli nell array
+      //funzione per scrivere nuovi msg e metterli nell'array
       saveElement() {
 
         //crea la data di oggi
         let newDate = `${dayjs().date()}/${dayjs().month()}/${dayjs().year()} ${dayjs().hour()}:${dayjs().minute()}:${dayjs().second()}`;
         console.log(newDate);
 
-        //nuovo messaggio inviato
+        //crea nuovo messaggio inviato
         this.contacts[this.indiceDinamico].messages.push({
           date: newDate,
           message: this.newMessage,
           status: 'sent',
         },)
 
-        //resetta il campo di imput
+        //resetta il campo di imput dei messaggi inviati
         this.newMessage = '';
 
-        //messaggio di risposta automatico
+        //messaggio di risposta automatico dopo 1 sec
         setTimeout(() => {
 
           this.contacts[this.indiceDinamico].messages.push({
@@ -231,8 +231,6 @@ var app = new Vue(
           let Name = element.name.toLowerCase();
           console.log(Name)
 
-
-          //se name è uguale a cerca allora = true 
           if (Name.includes(this.cerca.toLowerCase())) {
             return element.visible = true
           } else {
@@ -258,7 +256,7 @@ var app = new Vue(
 
 
 
-      //funzione per l'ultimo messaggio inviato
+      //funzione per l'ultimo messaggio inviato nell'elenco chat
       getLastMessage(index) {
 
         let Message = this.contacts[index].messages.length - 1;

@@ -100,11 +100,16 @@
 
                 <!-- box messaggi -->
                 <div class="box-chat">
+
+                    <!-- messaggi inviati e ricevuti -->
                     <div class="messaggi-chat mt-5" v-for="(elem,index) in contacts[indiceDinamico].messages">
                         <div>
                             <div class="chat"
                                 :class="(elem.status == 'sent') ? 'bg-success margin-chat' : 'bg-light ' ">
-                                {{elem.message}} <span class="testo-orari"> {{getLastHoursChat(elem)}}</span>
+                                {{elem.message}} 
+
+                                <!-- oraio del messaggio  -->
+                                <span class="testo-orari"> {{getLastHoursChat(elem)}}</span>
 
                                 <!-- button per cancellare messaggi chat  -->
                                 <span>
